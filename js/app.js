@@ -17,6 +17,9 @@ const handleFormSubmit = function (event) {
 
   newItem.textContent = `${title}, ${author}, ${category}`;
 
-  const unorderedList = document.querySelector('ul');
+  const unorderedList = document.querySelector('#reading-list');
   unorderedList.appendChild(newItem);
+
+  event.target.reset();
+
 };
