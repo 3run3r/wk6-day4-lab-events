@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-item-form');
   form.addEventListener('submit', handleFormSubmit);
 
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete All';
+  
+  const unorderedList = document.querySelector('#reading-list');
+  unorderedList.appendChild(deleteButton);
+
   console.log('JavaScript loaded');
 });
 
