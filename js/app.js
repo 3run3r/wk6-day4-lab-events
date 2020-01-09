@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
   body.appendChild(deleteButton);
 
-  console.dir(unorderedList);
-
   console.log('JavaScript loaded');
 });
 
@@ -30,8 +28,6 @@ const handleFormSubmit = function (event) {
   unorderedList.appendChild(newItem);
 
   event.target.reset();
-
-  console.dir(newItem);
 
 };
 
