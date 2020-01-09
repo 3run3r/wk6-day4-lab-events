@@ -5,9 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete All';
-  
-  const unorderedList = document.querySelector('#reading-list');
-  unorderedList.appendChild(deleteButton);
+  deleteButton.addEventListener('click', handleDelete);
+
+  const body = document.querySelector('body');
+  body.appendChild(deleteButton);
+
+  console.dir(unorderedList);
 
   console.log('JavaScript loaded');
 });
@@ -27,5 +30,14 @@ const handleFormSubmit = function (event) {
   unorderedList.appendChild(newItem);
 
   event.target.reset();
+
+  console.dir(newItem);
+
+};
+
+const handleDelete = function () {
+
+  const unorderedList = document.querySelector('#reading-list');
+  unorderedList.innerHTML = "";
 
 };
